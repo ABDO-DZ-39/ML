@@ -1,1 +1,126 @@
+# التمرين 1: Variables and Numbers
 
+name = "Ali"
+city = "tama"
+
+print(name)
+print(city)
+
+a = 20
+b = 7
+
+print(a / b)   
+print(a // b)
+print(a % b)   
+
+
+
+# التمرين 2
+p = "Python"
+c = "Coding"
+
+print(p[6])
+print(p[6:])
+
+
+print(p[::-1])
+
+
+p += c
+print(p)
+
+
+p = "Mython"
+
+
+
+
+
+
+# التمرين 3
+
+rgb = ["R", "G", "B"]
+
+rgb_copy = rgb
+rgb_copy.append("A")
+
+print(rgb_copy)
+print(rgb)
+print(id(rgb) == id(rgb_copy))
+
+
+
+rgb = ["R", "G", "B"]
+
+correct_rgb_copy = rgb[:]
+correct_rgb_copy.append("A")
+
+print(correct_rgb_copy)
+print(rgb)
+print(id(rgb) == id(correct_rgb_copy))
+
+
+# التمرين 4
+
+numbers = [-3, 5, -1, 7, 0, -8, 10]
+
+count = 0
+
+for number in numbers:
+    if number > 0:
+        count += 1
+
+print("Count of positive numbers:", count)
+
+
+# التمرين 5
+
+
+def filter_even_numbers(numbers):
+    result = []
+
+    for number in numbers:
+        if number % 2 == 0:
+            result.append(number)
+
+    return result
+
+
+test = [1, 2, 3, 4, 5, 6, 7, 8]
+
+print(filter_even_numbers(test))
+
+
+# التمرين 6
+
+students = ["Ali", "moh", "fares", "zeckri", "tor"]
+grades = [85, 90, 78, 92, 90]
+
+unique_grades = set(grades)
+
+highest_grade = max(grades)
+
+student_grades = dict(zip(students, grades))
+
+top_students = []
+
+for student, grade in student_grades.items():
+    if grade == highest_grade:
+        top_students.append(student)
+
+print("Student Grades Dictionary:", student_grades)
+print("Unique Grades Set:", unique_grades)
+print("Highest Grade:", highest_grade)
+print("Top Student(s):", top_students)
+
+# التمرين 7
+
+
+from mymodule import create_dictionary
+
+keys = ["name", "age", "city"]
+values = ["Alice", 25, "New York"]
+
+result = create_dictionary(keys, values)
+
+print("Generated Dictionary:", result)
